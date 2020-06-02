@@ -37,9 +37,9 @@
           <td><img [src]="top.album.images | noimagen" class="img-thumb"></td>
           <td>{{top.album.name}}</td>
           <td>{{top.name}}</td>
-          <td><audio [src]="top.preview_url" controls>
-
-          </audio></td>
+          <!-- <td><audio [src]="top.preview_url" controls> -->
+          <td><iframe [src]="top.uri | domseguro:'https://open.spotify.com/embed/?uri='" width="100" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></td>
+          <!-- </audio></td> -->
         </tr>
       </tbody>
     </table>
